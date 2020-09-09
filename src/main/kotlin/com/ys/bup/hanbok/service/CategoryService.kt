@@ -1,7 +1,7 @@
 package com.ys.bup.hanbok.service
 
 import com.ys.bup.hanbok.domain.Category
-import com.ys.bup.hanbok.repository.CategoryRepository
+import com.ys.bup.hanbok.repository.category.CategoryRepository
 import org.springframework.stereotype.Service
 
 @Service
@@ -10,12 +10,12 @@ class CategoryService(private val categoryRepository: CategoryRepository) {
      * 카테고리 추가
      */
     fun save(category: Category): Long {
-        validateDuplicateMember(category)   // 중복 회원 검증
+        validateDuplicateCategory(category)   // 중복 회원 검증
         categoryRepository.save(category)
         return category.id
     }
 
-    private fun validateDuplicateMember(category: Category) {
+    private fun validateDuplicateCategory(category: Category) {
         category.name.let {
             if(it == null) {
                 throw IllegalStateException("카테고리 이름이 없습니다.")

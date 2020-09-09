@@ -1,7 +1,7 @@
 package com.ys.bup.hanbok.service
 
 import com.ys.bup.hanbok.domain.Category
-import com.ys.bup.hanbok.repository.MemoryCategoryRepository
+import com.ys.bup.hanbok.repository.category.MemoryCategoryRepository
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertThrows

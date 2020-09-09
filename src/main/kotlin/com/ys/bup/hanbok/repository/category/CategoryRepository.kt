@@ -1,4 +1,4 @@
-package com.ys.bup.hanbok.repository
+package com.ys.bup.hanbok.repository.category
 
 import com.ys.bup.hanbok.domain.Category
 
